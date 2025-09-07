@@ -1,0 +1,54 @@
+ Problem 2: Successive Wins
+
+  To encourage Elmer's promising tennis career, his father offers him a prize if he wins (at least) two
+  tennis sets in a row in a three-set series. The three sets are to be played against his father and the
+  club champion alternately. Elmer has a choice of playing against them in either of the two sequences:
+
+   1. Father, Champion, Father
+   2. Champion, Father, Champion
+
+  The champion is a better player than Elmer's father. The probability of Elmer winning against the
+  champion is c, and the probability of winning against his father is f. We are given that c < f.
+
+  Which sequence of opponents should Elmer choose to maximize his probability of winning the prize?
+
+問題 2: 連續獲勝 (Successive Wins)
+
+  為了鼓勵 Elmer
+  有前途的網球事業，他的父親承諾，只要他在一個三盤系列賽中能連續贏得（至少）兩盤，就給他一個獎品。
+
+  這三盤比賽將輪流與他的父親和俱樂部冠軍對戰。冠軍是比他父親更強的選手。Elmer 有兩種對手順序可以選擇：
+
+   1. 父親 - 冠軍 - 父親 (F-C-F)
+   2. 冠軍 - 父親 - 冠軍 (C-F-C)
+
+  已知 Elmer 戰勝父親的機率是 f，戰勝冠軍的機率是 c，並且 c < f。
+  Elmer 應該選擇哪一種順序，才能讓他獲得獎品的機率最大化？
+
+---------------------------------------------------------------------------------------------
+這題的結果其實非常反直覺，因為會下意識認為跟比較弱的對手比較多次應該高機率會連勝。
+但如果把情況列舉出來，會試下面結果:
+
+  情況 1: 選擇 F-C-F 順序
+  每盤獲勝的機率分別是 f, c, f。
+   * P(WWL) = f * c * (1-f)
+   * P(LWW) = (1-f) * c * f
+   * P(WWW) = f * c * f = f²c
+
+  總機率 P(F-C-F) = f*c*(1-f) + f*c*(1-f) + f²c
+  = fc - f²c + fc - f²c + f²c
+  = 2fc - f²c
+  = fc(2 - f)
+
+  情況 2: 選擇 C-F-C 順序
+  每盤獲勝的機率分別是 c, f, c。
+   * P(WWL) = c * f * (1-c)
+   * P(LWW) = (1-c) * f * c
+   * P(WWW) = c * f * c = c²f
+
+  總機率 P(C-F-C) = c*f*(1-c) + c*f*(1-c) + c²f
+  = cf - c²f + cf - c²f + c²f
+  = 2cf - c²f
+  = cf(2 - c)
+
+可以簡單看出，情況1機率比較低，因為c < f。
