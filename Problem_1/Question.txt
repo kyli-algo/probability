@@ -1,0 +1,13 @@
+Q: A drawer contains red socks and black socks. When two socks are drawn at random, the probability
+   that both are red is 1/2.
+     (a) How small can the number of socks in the drawer be?
+     (b) How small if the number of black socks is even?
+
+Q: 一個抽屜裡裝有紅色襪子和黑色襪子。當從中隨機抽取兩隻襪子時，兩隻都是紅色的機率正好是 1/2。
+    (a) 抽屜裡的襪子總數最少可以是多少？
+    (b) 如果黑色襪子的數量是偶數，那麼抽屜裡的襪子總數最少可以是多少？
+
+我們可以分析一下問題，題目說，兩個都是紅色的機率是1/2，
+假設紅色襪子與黑色襪子數量相等，理論上兩個都是紅色襪子的機會應該是在1/4(這應該很好理解，抽取兩次1/4全黑，1/2 一黑一紅，1/4全紅)，
+所以直覺上理解，紅色數量應該要更多一些。
+
